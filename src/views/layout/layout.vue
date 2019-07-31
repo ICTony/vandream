@@ -5,7 +5,7 @@
     </div>
     <div class="container-main">
       <div class="side">我是左侧菜单栏</div>
-      <div class="main">
+      <div class="main bg-f3">
         <router-view/>
       </div>
     </div>
@@ -340,12 +340,7 @@ export default {
     };
   },
   created() {
-    console.log(44);
-  },
-  watch: {
-    $route: function(to, from) {
-      console.log(this.$route);
-    }
+
   }
 };
 </script>

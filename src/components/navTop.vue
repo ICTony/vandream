@@ -17,7 +17,7 @@ export default {
 <style scoped lang="scss">
 .nav {
   text-align: left;
-  background-color: #f5f5f5;
+  background-color: #ffffff;
   border-bottom: solid 1px #ccc;
   .company-name {
     font-family: PingFangSC-Semibold;
