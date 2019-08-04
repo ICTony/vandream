@@ -1,25 +1,21 @@
 <template>
   <div class="chart-container">
     <title-component :color="titleOption.color" :name="titleOption.title" :date="titleOption.date"></title-component>
-    <div>
-      <doughnutChart :data="chairtData" :color="chartColor" chartId="commodity-chart"></doughnutChart>
-    </div>
-    <div class="data-total">
-      <div class="title">商品总量</div>
-      <div class="num">232333</div>
+    <div class>
+      <trackedChart :data="chairtData" :color="chartColor" chartId='tracked-chart'></trackedChart>
     </div>
   </div>
 </template>
 
 <script>
 import titleComponent from "@/components/common/titleComponent";
-import doughnutChart from "@/components/common/doughnutChart";
+import trackedChart from "@/components/common/trackedChart";
 
 export default {
   name: "chartContainer",
   components: {
     titleComponent,
-    doughnutChart
+    trackedChart
   },
   props: {
     initialData: {
@@ -32,11 +28,11 @@ export default {
   data: function() {
     return {
       chairtData: [],
-      chartColor: ["#FAB586", "#FF9484", "#AA90E9", "#66BCE7", "#51CE8C"],
-      titleOption: {
-        color: "#BC86FF",
-        title: "商品",
-        date: "2019年07月23日"
+      chartColor:["#FFC7AD", "#FF9D70", "#FF7434", "#FF5a10",'red'],
+      titleOption:{
+        color:'#68D1FC',
+        title:'订单',
+        date:'2019年07月23日'
       }
     };
   },
@@ -114,10 +110,10 @@ export default {
           // }
         }
       }
-      chartDataArr.sort(function(a, b) {
-        a.value - b.value > 0;
-      });
-      console.log(chartDataArr);
+      chartDataArr.sort(function(a,b){
+          a.value - b.value >0
+      })
+      console.log(chartDataArr)
       this.chairtData = chartDataArr;
     }
   }
@@ -127,30 +123,8 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 .chart-container {
-  position: relative;
   padding: 20px;
   height: 180px;
   background-color: #fff;
-  .data-total {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    padding-top: 20px;
-    .title {
-      font-family: PingFangSC-Regular;
-      font-size: 10px;
-      color: #333333;
-           margin-bottom: 5px;
-    }
-    .num {
-      font-family: DINPro-Bold;
-      font-size: 13px;
-      color: #333333;
-      text-align: center;
- 
-      font-weight: 800;
-    }
-  }
 }
 </style>

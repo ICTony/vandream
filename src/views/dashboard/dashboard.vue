@@ -2,7 +2,7 @@
   <div class="home pl-20 pt-20 pr-20">
     <dashboardMain v-if="false" :data="approvalData" :dataKey="approvalKey"></dashboardMain>
     <dashboardMain v-if="false" :data="todoList" :dataKey="todoKey"></dashboardMain>
-
+<span style="display:inline-block;margin-right:5px;border-radius:4px;width:6px;border:1px solid #63D599 height:6px;"></span> 
     <div class="suppliers mr-20">
       <supplierChart></supplierChart>
     </div>
@@ -12,7 +12,9 @@
     <div class="commodity mr-20">
     <commodityChart></commodityChart>
     </div>
-    <div class="order">order</div>
+    <div class="order">
+      <orderChart></orderChart>
+    </div>
   </div>
 </template>
 
@@ -24,6 +26,7 @@
 import supplierChart from "@/components/dashboard/supplierChart";
 import customerChart from "@/components/dashboard/customerChart";
 import commodityChart from "@/components/dashboard/commodityChart";
+import orderChart from "@/components/dashboard/orderChart";
 
 
 export default {
@@ -31,7 +34,8 @@ export default {
   components: {
     supplierChart,
     customerChart,
-    commodityChart
+    commodityChart,
+    orderChart
   },
   data: function() {
     return {
