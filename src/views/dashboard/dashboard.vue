@@ -4,10 +4,14 @@
     <dashboardMain v-if="false" :data="todoList" :dataKey="todoKey"></dashboardMain>
 
     <div class="suppliers mr-20">
-      <chartContainer :initialData="supplierData"></chartContainer>
+      <supplierChart></supplierChart>
     </div>
-    <div class="customers mr-20">customers</div>
-    <div class="commodity mr-20">commodity</div>
+    <div class="customers mr-20">
+      <customerChart></customerChart>
+    </div>
+    <div class="commodity mr-20">
+    <commodityChart></commodityChart>
+    </div>
     <div class="order">order</div>
   </div>
 </template>
@@ -17,12 +21,17 @@
 // import HelloWorld from "@/components/HelloWorld.vue";
 // import dashboardMain from "@/components/dashboardMain";
 // import navTop from "@/components/navTop";
-import chartContainer from "@/components/dashboard/chartContainer";
+import supplierChart from "@/components/dashboard/supplierChart";
+import customerChart from "@/components/dashboard/customerChart";
+import commodityChart from "@/components/dashboard/commodityChart";
+
 
 export default {
   name: "home",
   components: {
-    chartContainer
+    supplierChart,
+    customerChart,
+    commodityChart
   },
   data: function() {
     return {
