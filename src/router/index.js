@@ -5,6 +5,8 @@ import Router from 'vue-router'
 //导入子路由
 import dashboard from './dashboard'
 import about from './about'
+import approvalList from './approvalList'
+import todoList from './todoList'
 
 Vue.use(Router)
 export default new Router({
@@ -15,7 +17,9 @@ export default new Router({
       direct:dashboard
     },
     ...dashboard,
-    ...about
+    ...about,
+    ...approvalList,
+    ...todoList
     // {
     //   path: '/',
     //   name: 'home',

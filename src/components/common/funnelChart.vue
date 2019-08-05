@@ -154,6 +154,7 @@ export default {
       position: absolute;
       left: 0;
       top: 2px;
+      width: 1px;
       height: 34px;
     }
     .line-first{
@@ -173,7 +174,7 @@ export default {
       background: #fff;
       border-radius: 50%;
       position: absolute;
-      left: -4px;
+      left: -3px;
       top: 5px;
     }
     .line-first::before{
