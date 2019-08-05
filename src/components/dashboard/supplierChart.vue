@@ -28,7 +28,7 @@ export default {
   data: function() {
     return {
       chairtData: [],
-      chartColor:["#FFC7AD", "#FF9D70", "#FF7434", "#FF5a10",'red'],
+      chartColor:["#FFC7AD ", "#FFA47B", "#FF8B56", "#FF6C29",'#F54C00'],
       titleOption:{
         color:'#FF7120',
         title:'供方',
@@ -100,7 +100,7 @@ export default {
             chartDataArr.push({
               name: "邀约客户",
               value: data[dataKeyArr[i]],
-              percentage: data["inviteInversionRate"]
+              // percentage: data["inviteInversionRate"]
             });
           }
           // if(dataKeyArr[i].indexOf('Rate') != -1){
@@ -124,7 +124,7 @@ export default {
 <style scoped lang="scss">
 .chart-container {
   padding: 20px;
-  height: 180px;
+  height: 220px;
   background-color: #fff;
 }
 </style>

@@ -5,7 +5,7 @@
       <div v-for="(item,index) in data" :key='index' class="data-container-item">
         <div class="border-line" :class="{'line-first':index==0,'line-last':index==data.length-1}"></div>
         <div class="chart-data">{{item.value}}</div>
-        <div class="chart-percent">{{item.percentage}}%</div>
+        <div class="chart-percent" v-if="item.percentage">{{item.percentage}}%</div>
       </div>
     </div>
   </div>
@@ -67,9 +67,9 @@ export default {
           name: "供方",
           type: "funnel",
           width: "40%",
-          height: "90%",
+          height: "85%",
           left: "10px",
-          top: "10%",
+          top: "15%",
           funnelAlign: "right",
           label: {
             show: true,
@@ -123,11 +123,11 @@ export default {
   position: relative;
   .chart-style {
     width: 100%;
-    height: 160px;
+    height: 200px;
   }
   .data-container {
     position: absolute;
-    top: 10%;
+    top: 23%;
     left: 48%;
   }
   .data-container {
@@ -136,7 +136,7 @@ export default {
     }
     .chart-data {
       font-family: DINPro-Bold;
-      font-size: 11px;
+      font-size: 12px;
       color: #333;
       line-height: 18px;
       font-weight: 800;
@@ -147,20 +147,22 @@ export default {
       font-size: 10px;
       margin-left: 10px;
       color: #bbbbbb;
+      margin-bottom: 3px;
     }
     .border-line{
       border-left: 1px solid #eee;
       position: absolute;
       left: 0;
-      height: 30px;
+      top: 2px;
+      height: 34px;
     }
     .line-first{
-      height: 20px;
-      top: 10px;
+      height: 30px;
+      top: 12px;
     }
     .line-last{
       height: 15px;
-      top: -5px;
+       top: -4px;
     }
     .border-line::before{
       content: '';

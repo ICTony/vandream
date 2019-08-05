@@ -124,7 +124,7 @@ export default {
 <style scoped lang="scss">
 .chart-container {
   padding: 20px;
-  height: 180px;
+  height: 220px;
   background-color: #fff;
 }
 </style>

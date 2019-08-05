@@ -32,7 +32,7 @@ export default {
   data: function() {
     return {
       chairtData: [],
-      chartColor: ["#FAB586", "#FF9484", "#AA90E9", "#66BCE7", "#51CE8C"],
+      chartColor:["#ff9484", "#fab586", "#51ce8c", "#66bce7",'#aa90e9'],
       titleOption: {
         color: "#BC86FF",
         title: "商品",
@@ -48,11 +48,11 @@ export default {
       msg: "",
       date: {
         censusId: "000193801249ddbc5a5ddaeb1ca00d94",
-        potentialCustomCount: 1000,
-        intentionCustomCount: 500,
-        conversionCustomCount: 100,
-        contractedCustomCount: 20,
-        inviteCustomCount: 78,
+        potentialCustomCount: 5941,
+        intentionCustomCount: 3797,
+        conversionCustomCount: 1662,
+        contractedCustomCount: 3858,
+        inviteCustomCount: 9,
         potentialInversionRate: 20.333,
         inviteInversionRate: 19.285,
         contractedInversionRate: 23,
@@ -74,35 +74,35 @@ export default {
         for (var i = 0; i < dataKeyArr.length; i++) {
           if (dataKeyArr[i] === "potentialCustomCount") {
             chartDataArr.push({
-              name: "潜在客户",
+              name: "潜在客是户",
               value: data[dataKeyArr[i]],
               percentage: data["potentialInversionRate"]
             });
           }
           if (dataKeyArr[i] === "intentionCustomCount") {
             chartDataArr.push({
-              name: "意向客户",
+              name: "意向都客户",
               value: data[dataKeyArr[i]],
               percentage: data["intentionInversionRate"]
             });
           }
           if (dataKeyArr[i] === "conversionCustomCount") {
             chartDataArr.push({
-              name: "转化客户",
+              name: "转化客都户",
               value: data[dataKeyArr[i]],
               percentage: data["conversionInversionRate"]
             });
           }
           if (dataKeyArr[i] === "conversionCustomCount") {
             chartDataArr.push({
-              name: "签约客户",
+              name: "签约客都户",
               value: data[dataKeyArr[i]],
               percentage: data["conversionInversionRate"]
             });
           }
           if (dataKeyArr[i] === "inviteCustomCount") {
             chartDataArr.push({
-              name: "邀约客户",
+              name: "邀约客对户",
               value: data[dataKeyArr[i]],
               percentage: data["inviteInversionRate"]
             });
@@ -129,14 +129,14 @@ export default {
 .chart-container {
   position: relative;
   padding: 20px;
-  height: 180px;
+  height: 220px;
   background-color: #fff;
   .data-total {
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    padding-top: 20px;
+    margin-top:32px;
     .title {
       font-family: PingFangSC-Regular;
       font-size: 10px;

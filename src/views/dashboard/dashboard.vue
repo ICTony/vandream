@@ -84,7 +84,7 @@ export default {
   justify-content: space-between;
   & > div {
     flex: 1;
-    border: 1px solid red;
+    // border: 1px solid red;
   }
 }
 </style>
